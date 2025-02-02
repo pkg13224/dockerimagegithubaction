@@ -1,0 +1,1 @@
+### how to create CI/CD pipeline. ci cd pipeline workflows must be created in .github\workflows folder.
