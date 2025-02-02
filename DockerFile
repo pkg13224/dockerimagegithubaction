@@ -1,0 +1,20 @@
+# use the official python image from the docker hub
+FROM python:3.9-slim
+
+# Set the working dir
+WORKDIR /app
+
+# Copy the current dir conents into the containder at /app. Below command copy all files of dir(in which DockerFile is present.)
+COPY . /app
+
+# Install any needed packages specified in the requirements.txt
+RUN pip install flask
+
+# Make port 5000 available to the world outside the container
+EXPOSE 5000
+
+# Run app.py when container launches
+CMD ["python", "app.py"]
+
+
+# This is the docker file for this entire application (All files under DOCKERIMAGE folder)
